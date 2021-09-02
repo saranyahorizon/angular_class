@@ -1,0 +1,19 @@
+<div>
+
+<p> Sample application to demo ngIf, ngFor and ngModule</p>
+
+	<label>First Name: </label>
+	<input id="fname" [(ngModel)]="userData.fname"/>
+	<br>
+	<label>Last Name: </label>
+	<input id="lname" [(ngModel)]="userData.lname"/>
+	<br>
+	<label>Age: </label>
+	<input id="age" [(ngModel)]="userData.age"/>	
+	<br>
+	<label>Gender: </label>
+	<input id="gender" [(ngModel)]="userData.gender"/>
+	<br>
+	
+	<input type="button" (click)="TakeData()"id="savebt" value="Save"/>
+</div>

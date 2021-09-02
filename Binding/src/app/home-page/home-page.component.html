@@ -1,0 +1,30 @@
+<div>
+<h1> Sample Binding Application</h1>
+<br>
+<br>
+<app-child-page (sendData)="receiveData($event)"></app-child-page>
+<br>
+	<div>
+		<table>
+			<thead>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Age</th>	
+				<th>Gender</th>			
+			</thead>
+			<tbody>
+			<tr *ngFor="let people of theMakal">
+				<td>{{ people.fname }}</td>
+				<td>{{ people.lname }}</td>
+				<td>{{ people.age }}</td>	
+				<td>{{ people.gender }}</td>
+				</tr>
+			</tbody>
+		</table>
+		<div *ngIf="showAddButton" >
+			<input type="button" (click)="ToggleButton()" id="reqToken" value="Reset Button"/>
+		</div>
+		<br>
+		
+		</div>
+</div>
