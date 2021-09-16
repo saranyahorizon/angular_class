@@ -16,7 +16,6 @@ export class HomePageComponent implements OnInit {
 
 	private dbser: DBServiceService;
 	public showAddButton: boolean;
-	public index: number;
 	
 	// userData: any = {fname: "", lname: "", age: "", gender: ""};
 	
@@ -32,7 +31,7 @@ export class HomePageComponent implements OnInit {
 		this.dbser = dbservice;
 //		this.thePeople.forEach(item => this.dbser.PostToDB(item));
 		this.showAddButton = true;
-		this.index=0;
+
 	}
 
   	ngOnInit(): void 
@@ -57,9 +56,8 @@ export class HomePageComponent implements OnInit {
 	
 	receiveData(event:any)
 	{
-		this.theMakal[this.index] = event;
+		this.theMakal.push(Object.assign({},event));
 		console.log(this.theMakal);
-		this.index++;
 	}
 	
 	onChange()

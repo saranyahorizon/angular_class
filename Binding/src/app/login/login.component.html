@@ -1,0 +1,25 @@
+<form #loginpage="ngForm">
+<p> Sample application to demo Login and form validation</p>
+
+<label>Login Name: </label>
+<input type="text" [(ngModel)]="login.name" name="Loginname" #Loginname="ngModel" required>
+
+<div *ngIf="Loginname.invalid && (Loginname.dirty || Loginname.touched)" style="color: red">
+<small *ngIf="Loginname.errors">
+	Login in name is required.
+</small>
+</div>
+<br>
+<br>
+<label>Password     : </label>
+<input type="text" [(ngModel)]="login.pwd" name="Password" #Password="ngModel" required>
+
+<div *ngIf="Password.invalid && (Password.dirty || Password.touched)" style="color: red">
+<small *ngIf="Password.errors">
+	Password is required.
+</small>
+</div>
+<br>
+<br>
+<button (click)="submit()">Submit</button>
+</form>

@@ -1,6 +1,10 @@
 <div>
 <h1> Sample Binding Application</h1>
 <br>
+<table>
+<td> <a [routerLink]="['/app-login']">LOGIN</a></td>
+<td> <a [routerLink]="['/app-register']">REGISTER</a></td>
+</table>
 <br>
 <app-child-page (sendData)="receiveData($event)"></app-child-page>
 <br>

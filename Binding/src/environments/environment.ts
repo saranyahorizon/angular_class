@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  weatherapi: "https://api.ambeedata.com/weather/latest/",
+  key: "39c4fe14d0cf787bbafbae7cf00b332c4a47378c736e668bbfcf6d88416ac1f1"
+  
 };
 
 /*
